@@ -171,7 +171,7 @@ const sangerRep = {
     },
     changePlatform: function (topic, newPlatformStatement) {
         // this.platformStatements.topic = topic.newPlatformStatement;
-        this.platformStatements.topic = newPlatformStatement;
+        this.platformStatements[topic] = newPlatformStatement;
     }
 }
 
@@ -181,6 +181,7 @@ console.log(sangerRep.biography);
 
 console.log(sangerRep.platformStatements.healthcare)
 
-sangerRep.changePlatform(sangerRep.platformStatements.healthcare, "Universal Healthcare")
+sangerRep.changePlatform("healthcare", "Universal Healthcare")
 
 console.log(sangerRep.platformStatements.healthcare)
+// console.log(sangerRep["platformStatements"]["taxes"])
